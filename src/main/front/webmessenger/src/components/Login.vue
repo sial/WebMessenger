@@ -49,6 +49,8 @@
 <script>
 import auth from '../utils/auth'
 
+document.title = 'Sign'
+
 export default {
   name: 'Login',
   data () {
