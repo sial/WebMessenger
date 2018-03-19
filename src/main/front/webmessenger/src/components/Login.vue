@@ -9,11 +9,11 @@
       <div class="login-box-body">
         <form method="post" @submit.prevent="submitUserData">
           <div class="form-group has-feedback">
-            <input type="login" maxlength="40" class="form-control" placeholder="Логин" v-model="usernameLocal">
+            <input type="login" maxlength="40" class="form-control" placeholder="Login" v-model="usernameLocal">
             <span class="fa fa-user form-control-feedback" ></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" maxlength="40" minlength="6" class="form-control" placeholder="Пароль" v-model="passwordLocal">
+            <input type="password" maxlength="40" minlength="6" class="form-control" placeholder="Password" v-model="passwordLocal">
             <span class="fa fa-lock form-control-feedback" ></span>
           </div>
           <div class="row">
@@ -22,12 +22,23 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-4 pull-right">
-              <button
-                class="btn btn-primary btn-block btn-flat">
-                Войти
-              </button>
-            </div>
+            <table>
+              <tr>
+                <td class="col-md-6 text-left">
+                  <a
+                    href="#/signup"
+                  >
+                    Sign-up
+                  </a>
+                </td>
+                <td class="col-md-2">
+                  <button
+                    class="btn btn-primary btn-block btn-flat">
+                    Sign-in
+                  </button>
+                </td>
+              </tr>
+            </table>
           </div>
         </form>
     </div>
@@ -85,13 +96,13 @@ export default {
   }
 
   .login-page{
-    background-color: #1a1f3b 50%;
+    background-color: #353b48;
     height: 100%;
   }
 
   .title{
     padding-left: 20px;
-    font-family: "Open-Sans Bold";
+    font-family: "Roboto Bold";
     color: #FFFFFF;
   }
 
@@ -100,8 +111,18 @@ export default {
   }
 
   .login-box{
-    background-color: #15B156;
+    background-color: #0097e6;
     margin-top:0;
     padding-top: 10px;
+  }
+
+  .btn-primary{
+    background-color: #487eb0;
+  }
+
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
   }
 </style>
